@@ -1,9 +1,9 @@
 import simulator.mazeAPI as mazeAPI
 
-def execute_algorithm(algorithm_code, serializedMaze):
+def execute_algorithm(algorithm_code, serializedMaze, socketio):
     # Prepare the local context for exec, including API functions and the maze
-    maze_simulator = mazeAPI.MazeSimulator(serializedMaze)
-
+    maze_simulator = mazeAPI.MazeSimulator(serializedMaze, socketio)
+    print("Maze simulator object created")
     local_context = {
         "sense_WallLeft": maze_simulator.sense_WallLeft,
         "sense_WallRight": maze_simulator.sense_WallRight,

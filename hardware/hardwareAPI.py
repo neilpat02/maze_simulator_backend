@@ -68,8 +68,9 @@ class HardwareControl:
         self.publish_message("robot/control", "move_backward")
         print("Sent move_backward command")
 
-# Example usage of the class
-if __name__ == "__main__":
-    hardware_control = HardwareControl()
-    # Test command to ensure setup is correct
-    hardware_control.move_forward()
+## Example usage of the class
+#if __name__ == "__main__":
+#    hardware_control = HardwareControl()
+#    # Test command to ensure setup is correct
+#    hardware_control.move_forward()
+#

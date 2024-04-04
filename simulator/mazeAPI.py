@@ -1,8 +1,9 @@
 import sys
 class MazeSimulator:
 
-    def __init__(self, serializedMaze):
+    def __init__(self, serializedMaze, socketio):
         self.serializedMaze = serializedMaze
+        self.socketio = socketio
 
     def find_robot_cell(self):
         return next((cell for cell in self.serializedMaze if cell["isRobotHere"]), None)
@@ -18,7 +19,7 @@ class MazeSimulator:
         # Mapping of directions to wall index
         direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
         wall_index = direction_to_index.get(robot_cell["robotDirection"], None)
-        print(wall_index)
+        #print(wall_index)
 
         if wall_index is not None:
             if wall_index == 0: #That means it is North facing so that it needs to return the wall from index 0
@@ -148,13 +149,17 @@ class MazeSimulator:
 
                 break
         
-
+        #print(self.serializedMaze)
+    
         if not robot_cell:
             return None
+        
+
+        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
     def move_backward(self):
         robot_cell = self.find_robot_cell()
-        print("move_backward - original cell: {robot_cell}", robot_cell)
+        #print("move_backward - original cell: {robot_cell}", robot_cell)
         if not robot_cell:
             return None
         
@@ -193,6 +198,9 @@ class MazeSimulator:
                 cell["robotDirection"] = robot_cell["robotDirection"]
                 print("move_backward - new cell: {cell}", cell)
                 break
+        
+
+        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
     def turn_left(self):
         robot_cell = self.find_robot_cell()
@@ -228,7 +236,10 @@ class MazeSimulator:
                         print("facing south: " + cell["robotDirection"])
                         break
 
+        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
+
     def turn_right(self):
+        
         robot_cell = self.find_robot_cell()
         if not robot_cell:
             return None
@@ -241,28 +252,29 @@ class MazeSimulator:
                 for cell in self.serializedMaze:
                     if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
                         cell["robotDirection"] = 'E'
-                        print("facing east: " + cell["robotDirection"])
+                        #print("facing east: " + cell["robotDirection"])
                         break
             elif wall_index == 1:
                 for cell in self.serializedMaze:
                     if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
                         cell["robotDirection"] = 'S'
-                        print("facing south: " + cell["robotDirection"])
+                        #print("facing south: " + cell["robotDirection"])
                         break
             elif wall_index == 2:
                 for cell in self.serializedMaze:
                     if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
                         cell["robotDirection"] = 'W'
-                        print("facing west: " + cell["robotDirection"])
+                        #print("facing west: " + cell["robotDirection"])
                         break
             elif wall_index == 3:
                 for cell in self.serializedMaze:
                     if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
                         cell["robotDirection"] = 'N'
-                        print("facing north: " + cell["robotDirection"])
+                        #print("facing north: " + cell["robotDirection"])
                         break
 
 
+        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
 
         

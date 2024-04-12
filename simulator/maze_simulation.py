@@ -1,23 +1,35 @@
+import threading
 import simulator.mazeAPI as mazeAPI
 
-def execute_algorithm(algorithm_code, serializedMaze, socketio):
-    # Prepare the local context for exec, including API functions and the maze
-    maze_simulator = mazeAPI.MazeSimulator(serializedMaze, socketio)
-    print("Maze simulator object created")
+def execute_algorithm_for_robot(robot_id, algorithm_code, maze_simulator):
+    # Create a copy of local context specific to this thread and robot
     local_context = {
-        "sense_WallLeft": maze_simulator.sense_WallLeft,
-        "sense_WallRight": maze_simulator.sense_WallRight,
-        "sense_WallFront": maze_simulator.sense_WallFront,
-        "sense_WallBack": maze_simulator.sense_WallBack,
-        "turn_left": maze_simulator.turn_left,
-        "turn_right": maze_simulator.turn_right,
-        "move_forward": maze_simulator.move_forward,
-        "move_backward": maze_simulator.move_backward,
-        "all_cells_visited": maze_simulator.all_cells_visited,
+        "sense_WallLeft": lambda: maze_simulator.sense_WallLeft(robot_id),
+        "sense_WallRight": lambda: maze_simulator.sense_WallRight(robot_id),
+        "sense_WallFront": lambda: maze_simulator.sense_WallFront(robot_id),
+        "sense_WallBack": lambda: maze_simulator.sense_WallBack(robot_id),
+        "turn_left": lambda: maze_simulator.turn_left(robot_id),
+        "turn_right": lambda: maze_simulator.turn_right(robot_id),
+        "move_forward": lambda: maze_simulator.move_forward(robot_id),
+        "move_backward": lambda: maze_simulator.move_backward(robot_id),
+        "all_cells_visited": maze_simulator.all_cells_visited  # Assuming this checks globally, not per robot
+        # No need to pass "find_robot_cell" unless used directly in algorithm code
     }
-
-    # Execute the algorithm code within the provided context
     exec(algorithm_code, local_context, local_context)
 
-    # After execution, the maze_simulator.serializedMaze holds the updated state
-    return maze_simulator.serializedMaze
+def execute_algorithm(algorithm_code, serializedMaze, socketio):
+    maze_simulator = mazeAPI.MazeSimulator(serializedMaze, socketio)
+    print("Maze simulator object created")
+
+    threads = []
+    for robot_id in [1, 2]:
+        # Each thread runs the algorithm for one robot
+        t = threading.Thread(target=execute_algorithm_for_robot, args=(robot_id, algorithm_code, maze_simulator))
+        threads.append(t)
+        t.start()
+
+    for t in threads:
+        t.join()
+
+    #return maze_simulator.serializedMaze
+    return 0

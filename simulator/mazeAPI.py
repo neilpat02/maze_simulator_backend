@@ -136,7 +136,7 @@ class MazeSimulator:
 
             # Emit the updated serialized maze state to the frontend
             print("Final maze data before emit:", self.serializedMaze)
-            time.sleep(0.5)
+            time.sleep(0.2)
             self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
 
@@ -178,7 +178,7 @@ class MazeSimulator:
                     break
             
             # Emit the updated serialized maze to the frontend
-            time.sleep(0.5)
+            time.sleep(0.2)
             self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
     def turn_left(self, robot_id):
@@ -201,7 +201,7 @@ class MazeSimulator:
             print(f"Robot {robot_id} now facing: {new_direction}")
             
             # Emit the updated serialized maze to the frontend
-            time.sleep(0.5)
+            time.sleep(0.2)
             self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
     def turn_right(self, robot_id):
@@ -224,7 +224,7 @@ class MazeSimulator:
             print(f"Robot {robot_id} now facing: {new_direction}")
             
             # Emit the updated serialized maze to the frontend
-            time.sleep(0.5)
+            time.sleep(0.2)
             self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
 

@@ -3,7 +3,8 @@ from flask_socketio import SocketIO
 from flask_cors import CORS
 #from testingFiles.sampleData import serializedMaze #, algorithm_code
 import simulator.maze_simulation as maze_simulation  # Assuming maze_simulation.py will handle the execution of the algorithm.
-import simulator.mazeAPI as mazeAPI  # This will contain the maze-specific API functions.
+import simulator.mazeAPI as mazeAPI
+from simulator.mazeAPI import ControlFlag  # This will contain the maze-specific API functions.
 import hardware.execution as hardware_execution # This will contain the hardware-specific execution
 import time
 
@@ -15,7 +16,7 @@ socketio = SocketIO(app, cors_allowed_origins="*", logger=True, engineio_logger=
 @app.route('/run', methods=['POST'])
 def run_simulation():
     # Extract the algorithm code and serialized maze from the request.
-
+    #ControlFlag.stop_threads = False
     data = request.json
     algorithm_code = data['algorithm_code']
     serialized_maze = data['serializedMaze']
@@ -31,7 +32,11 @@ def run_simulation():
 
     return jsonify({"message": "Simulation is running ", "updatedMaze": updatedSerializedMaze})
 
- 
+@app.route('/reset', methods=['POST'])
+def reset_simulation():
+    ControlFlag.stop_threads = True
+    return jsonify({"message": "Simulation reset initiated"}), 200
+
 
 @app.route('/upload_to_bot', methods=['POST'])
 def upload_to_bot():
@@ -53,5 +58,4 @@ def upload_to_bot():
 if __name__ == '__main__':
     #app.run(debug=True)
     socketio.run(app, port=5001, debug=True)
-
 

@@ -1,6 +1,10 @@
 import sys
 import threading
 import time
+
+class ControlFlag:
+    stop_threads = False
+
 class MazeSimulator:
 
     def __init__(self, serializedMaze, socketio):

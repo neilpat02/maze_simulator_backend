@@ -6,7 +6,7 @@ class HardwareControl:
         self.client = mqtt.Client()
 
         # Define the MQTT Broker Address (Replace with the actual address of  broker)
-        self.mqtt_broker = 'test.mosquitto.org'
+        self.mqtt_broker = '192.168.1.102'
 
         # Set callback methods
         self.client.on_connect = self.on_connect
@@ -33,6 +33,7 @@ class HardwareControl:
     
     def parse_line_by_line(self, code):
         lines = code.split('\n')
+        self.publish_message('robot/control', 'SOF')
         for line in lines:
             new_line = line.replace('\t', '^')
             self.publish_message('robot/control', new_line)

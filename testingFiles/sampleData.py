@@ -7,13 +7,24 @@ serializedMaze = [
     "j": 0,
     "walls": [
       true,
-      false,
       true,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": true,
+        "visited": true,
+        "direction": "S"
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -24,22 +35,44 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 0,
     "walls": [
       true,
-      false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
@@ -48,53 +81,25 @@ serializedMaze = [
       true,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
-    "j": 0,
-    "walls": [
-      true,
-      false,
-      false,
-      false
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 5,
-    "j": 0,
-    "walls": [
-      true,
-      false,
-      true,
-      false
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 6,
-    "j": 0,
-    "walls": [
-      true,
-      false,
-      true,
-      false
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 7,
     "j": 0,
     "walls": [
       true,
@@ -102,12 +107,23 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
-    "i": 8,
+    "i": 5,
     "j": 0,
     "walls": [
       true,
@@ -115,9 +131,92 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 6,
+    "j": 0,
+    "walls": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 7,
+    "j": 0,
+    "walls": [
+      true,
+      false,
+      false,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 8,
+    "j": 0,
+    "walls": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
@@ -128,9 +227,20 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -141,22 +251,44 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 0,
     "walls": [
       true,
-      false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
@@ -164,25 +296,47 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 0,
     "walls": [
       true,
-      false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
@@ -190,12 +344,23 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -206,48 +371,92 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 1,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 1,
     "walls": [
       false,
-      false,
       true,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 1,
     "walls": [
-      true,
+      false,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
@@ -255,38 +464,71 @@ serializedMaze = [
     "walls": [
       true,
       true,
-      true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 1,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 1,
     "walls": [
+      false,
+      false,
       true,
-      false,
-      false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
@@ -297,77 +539,47 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 1,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
-    "j": 1,
-    "walls": [
-      false,
-      true,
-      false,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 9,
-    "j": 1,
-    "walls": [
-      false,
-      true,
-      false,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 10,
-    "j": 1,
-    "walls": [
-      false,
-      true,
-      false,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 11,
-    "j": 1,
-    "walls": [
-      true,
-      false,
-      false,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 12,
     "j": 1,
     "walls": [
       true,
@@ -375,35 +587,164 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 9,
+    "j": 1,
+    "walls": [
+      false,
+      false,
+      true,
+      true
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 10,
+    "j": 1,
+    "walls": [
+      false,
+      true,
+      true,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 11,
+    "j": 1,
+    "walls": [
+      false,
+      true,
+      false,
+      true
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 12,
+    "j": 1,
+    "walls": [
+      false,
+      true,
+      true,
+      true
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 1,
     "walls": [
-      true,
+      false,
       true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 1,
     "walls": [
-      true,
       false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -411,25 +752,47 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 2,
     "walls": [
-      false,
-      false,
       true,
+      false,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -437,12 +800,23 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -453,48 +827,92 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 2,
     "walls": [
+      false,
+      false,
       true,
-      false,
-      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 2,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 2,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
@@ -505,22 +923,44 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 2,
     "walls": [
-      false,
-      false,
       true,
+      true,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -528,77 +968,143 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 2,
     "walls": [
-      false,
       true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
     "j": 2,
     "walls": [
+      true,
       false,
-      false,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 2,
     "walls": [
       false,
-      true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 2,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 2,
     "walls": [
       false,
-      false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
@@ -606,51 +1112,95 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
     "j": 2,
     "walls": [
-      true,
+      false,
       true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 3,
     "walls": [
-      true,
       false,
+      true,
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 3,
     "walls": [
-      true,
+      false,
       true,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -661,22 +1211,44 @@ serializedMaze = [
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 3,
     "walls": [
+      true,
+      true,
       false,
-      true,
-      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
@@ -684,12 +1256,23 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
@@ -700,9 +1283,20 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
@@ -713,61 +1307,116 @@ serializedMaze = [
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 3,
     "walls": [
-      true,
       false,
+      true,
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
     "j": 3,
     "walls": [
+      false,
+      false,
       true,
-      true,
-      true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 3,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
     "j": 3,
     "walls": [
-      false,
       true,
+      false,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
@@ -776,11 +1425,22 @@ serializedMaze = [
       true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
@@ -791,35 +1451,68 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 3,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 3,
     "walls": [
-      true,
       false,
       true,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -828,11 +1521,22 @@ serializedMaze = [
       false,
       true,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
@@ -843,9 +1547,20 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -856,9 +1571,20 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -866,64 +1592,119 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 4,
     "walls": [
+      false,
       true,
-      false,
-      false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 4,
     "walls": [
-      true,
+      false,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 4,
     "walls": [
       true,
-      false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
     "j": 4,
     "walls": [
       true,
-      true,
       false,
-      false
+      true,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
@@ -932,24 +1713,46 @@ serializedMaze = [
       false,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
     "j": 4,
     "walls": [
       true,
-      false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
@@ -957,12 +1760,23 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -973,9 +1787,20 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
@@ -986,38 +1811,47 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 4,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
-    "j": 4,
-    "walls": [
-      false,
-      false,
-      true,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 14,
     "j": 4,
     "walls": [
       true,
@@ -1025,9 +1859,44 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 14,
+    "j": 4,
+    "walls": [
+      true,
+      true,
+      false,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -1036,11 +1905,22 @@ serializedMaze = [
       false,
       true,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
@@ -1051,9 +1931,20 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -1064,87 +1955,164 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 5,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 5,
     "walls": [
-      false,
+      true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 5,
     "walls": [
       true,
-      false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 5,
     "walls": [
-      true,
-      true,
       false,
-      false
+      false,
+      true,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
     "j": 5,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 5,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -1152,38 +2120,71 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 5,
     "walls": [
-      true,
+      false,
       false,
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
     "j": 5,
     "walls": [
       false,
-      false,
+      true,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
@@ -1191,51 +2192,95 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 5,
     "walls": [
-      false,
+      true,
       false,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 5,
     "walls": [
       true,
-      true,
       false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 5,
     "walls": [
-      true,
       false,
       true,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -1243,25 +2288,47 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 6,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -1270,11 +2337,22 @@ serializedMaze = [
       true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -1285,90 +2363,119 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 6,
     "walls": [
       true,
-      false,
-      false,
+      true,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 6,
     "walls": [
-      true,
-      true,
       false,
-      false
+      false,
+      true,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 6,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
     "j": 6,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
-    "j": 6,
-    "walls": [
-      false,
-      true,
-      false,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 8,
-    "j": 6,
-    "walls": [
-      false,
-      false,
-      true,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 9,
     "j": 6,
     "walls": [
       true,
@@ -1376,9 +2483,68 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 8,
+    "j": 6,
+    "walls": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 9,
+    "j": 6,
+    "walls": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -1386,90 +2552,167 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 6,
     "walls": [
-      true,
-      true,
       false,
+      true,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 6,
     "walls": [
       false,
-      true,
+      false,
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 6,
     "walls": [
-      false,
+      true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 6,
     "walls": [
       true,
-      false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
     "j": 6,
     "walls": [
-      true,
+      false,
       true,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 7,
     "walls": [
-      false,
       true,
+      false,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -1477,12 +2720,23 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -1493,61 +2747,116 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 7,
     "walls": [
+      true,
+      true,
       false,
-      true,
-      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 7,
     "walls": [
-      false,
       true,
+      false,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 7,
     "walls": [
       false,
-      true,
       false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
     "j": 7,
     "walls": [
-      false,
-      false,
       true,
-      true
+      true,
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
@@ -1556,63 +2865,118 @@ serializedMaze = [
       false,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
     "j": 7,
     "walls": [
-      true,
+      false,
       true,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 7,
     "walls": [
-      false,
-      false,
       true,
+      false,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
     "j": 7,
     "walls": [
-      false,
+      true,
       true,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 7,
     "walls": [
-      false,
-      false,
       true,
+      false,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
@@ -1620,12 +2984,23 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
@@ -1633,25 +3008,47 @@ serializedMaze = [
     "walls": [
       true,
       true,
-      false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 7,
     "walls": [
+      false,
+      false,
       true,
-      false,
-      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -1662,9 +3059,20 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
@@ -1672,51 +3080,95 @@ serializedMaze = [
     "walls": [
       false,
       false,
-      true,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 8,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 8,
     "walls": [
       true,
-      false,
       true,
-      true
+      false,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 8,
     "walls": [
-      true,
-      true,
       false,
-      false
+      false,
+      true,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
@@ -1724,25 +3176,47 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 8,
     "walls": [
-      false,
-      false,
       true,
+      false,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
@@ -1750,25 +3224,47 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 8,
     "walls": [
       true,
-      false,
+      true,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -1777,24 +3273,46 @@ serializedMaze = [
       true,
       false,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 8,
     "walls": [
-      true,
-      true,
       false,
+      false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -1803,63 +3321,118 @@ serializedMaze = [
       true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 8,
     "walls": [
-      true,
-      true,
       false,
+      true,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 8,
     "walls": [
+      false,
+      false,
       true,
-      false,
-      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 8,
     "walls": [
+      true,
+      true,
       false,
-      true,
-      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 8,
     "walls": [
-      false,
       true,
+      false,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -1867,116 +3440,215 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 9,
     "walls": [
-      true,
       false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 9,
     "walls": [
       true,
-      false,
       true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 9,
     "walls": [
-      true,
+      false,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 9,
     "walls": [
-      false,
       true,
       false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 9,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 9,
     "walls": [
-      true,
       false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
     "j": 9,
     "walls": [
-      true,
+      false,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 9,
     "walls": [
       true,
-      true,
       false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -1984,25 +3656,47 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 9,
     "walls": [
-      false,
-      false,
       true,
+      false,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -2010,51 +3704,95 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 9,
     "walls": [
+      true,
+      true,
       false,
-      true,
-      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 9,
     "walls": [
-      false,
+      true,
       true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 9,
     "walls": [
+      false,
+      false,
       true,
-      false,
-      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
@@ -2065,22 +3803,44 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
     "j": 9,
     "walls": [
-      false,
+      true,
       true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
@@ -2091,61 +3851,116 @@ serializedMaze = [
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 10,
     "walls": [
-      true,
       false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 10,
     "walls": [
       true,
-      true,
       false,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 10,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 10,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
@@ -2154,11 +3969,22 @@ serializedMaze = [
       false,
       true,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
@@ -2169,113 +3995,212 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 10,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
     "j": 10,
     "walls": [
-      false,
-      false,
       true,
-      true
+      true,
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 10,
     "walls": [
-      true,
       false,
       true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
     "j": 10,
     "walls": [
-      true,
+      false,
       true,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 10,
     "walls": [
-      true,
       false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 10,
     "walls": [
       false,
+      false,
       true,
-      true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 10,
     "walls": [
-      false,
+      true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 10,
     "walls": [
       true,
-      true,
       false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -2284,37 +4209,70 @@ serializedMaze = [
       false,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 11,
     "walls": [
       true,
-      false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 11,
     "walls": [
-      true,
+      false,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -2322,12 +4280,23 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
@@ -2335,38 +4304,71 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 11,
     "walls": [
-      false,
-      false,
       true,
+      true,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 11,
     "walls": [
       true,
-      true,
       false,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
@@ -2374,12 +4376,23 @@ serializedMaze = [
     "walls": [
       false,
       false,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
@@ -2390,35 +4403,68 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
     "j": 11,
     "walls": [
       true,
-      false,
+      true,
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 11,
     "walls": [
+      false,
       true,
-      true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -2429,38 +4475,47 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 11,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
-    "j": 11,
-    "walls": [
-      true,
-      false,
-      false,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 13,
     "j": 11,
     "walls": [
       true,
@@ -2468,22 +4523,68 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 13,
+    "j": 11,
+    "walls": [
+      true,
+      false,
+      false,
+      true
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 11,
     "walls": [
-      false,
       true,
       false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -2491,25 +4592,47 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 12,
     "walls": [
       false,
-      true,
+      false,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -2518,76 +4641,142 @@ serializedMaze = [
       true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 12,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 12,
     "walls": [
+      false,
       true,
-      false,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 12,
     "walls": [
-      true,
+      false,
       true,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 12,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
     "j": 12,
     "walls": [
-      false,
-      false,
       true,
-      true
+      false,
+      false,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
@@ -2598,9 +4787,20 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -2611,22 +4811,44 @@ serializedMaze = [
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 12,
     "walls": [
-      true,
-      true,
       false,
+      true,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -2637,22 +4859,44 @@ serializedMaze = [
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 12,
     "walls": [
+      true,
+      true,
       false,
-      true,
-      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
@@ -2663,9 +4907,20 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
@@ -2676,35 +4931,68 @@ serializedMaze = [
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 12,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
     "j": 12,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
@@ -2712,25 +5000,47 @@ serializedMaze = [
     "walls": [
       false,
       false,
-      false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 13,
     "walls": [
       true,
-      false,
       true,
+      false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -2739,63 +5049,118 @@ serializedMaze = [
       true,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
     "j": 13,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 13,
     "walls": [
       false,
-      true,
       false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 13,
     "walls": [
-      false,
       true,
       false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
     "j": 13,
     "walls": [
+      false,
       true,
-      false,
-      false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
@@ -2803,12 +5168,23 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -2819,22 +5195,44 @@ serializedMaze = [
       false,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 13,
     "walls": [
-      false,
-      false,
       true,
+      false,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -2842,64 +5240,119 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      false,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 13,
     "walls": [
-      true,
-      true,
       false,
+      true,
+      true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 13,
     "walls": [
       false,
-      true,
       false,
+      true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 13,
     "walls": [
       true,
-      true,
       false,
-      true
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 13,
     "walls": [
       true,
+      true,
       false,
-      false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -2907,38 +5360,71 @@ serializedMaze = [
     "walls": [
       false,
       true,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 14,
     "walls": [
-      false,
+      true,
       true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
     "j": 14,
     "walls": [
-      true,
       false,
+      true,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
@@ -2946,12 +5432,23 @@ serializedMaze = [
     "walls": [
       true,
       false,
-      true,
-      false
+      false,
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
@@ -2962,38 +5459,95 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
     "j": 14,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
     "j": 14,
     "walls": [
-      false,
+      true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
+    "j": 14,
+    "walls": [
+      true,
+      false,
+      true,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 7,
     "j": 14,
     "walls": [
       false,
@@ -3001,22 +5555,20 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 7,
-    "j": 14,
-    "walls": [
-      true,
-      true,
-      false,
-      true
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -3027,113 +5579,212 @@ serializedMaze = [
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 14,
     "walls": [
+      false,
+      false,
       true,
-      false,
-      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
     "j": 14,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 14,
     "walls": [
-      false,
+      true,
       true,
       false,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
     "j": 14,
     "walls": [
-      false,
       true,
+      false,
       false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 13,
     "j": 14,
     "walls": [
-      false,
       true,
-      false,
-      true
+      true,
+      true,
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 14,
     "j": 14,
     "walls": [
       false,
-      false,
       true,
+      false,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
     "j": 14,
     "walls": [
-      true,
+      false,
       true,
       false,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 0,
     "j": 15,
     "walls": [
       false,
-      true,
+      false,
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 1,
@@ -3142,24 +5793,46 @@ serializedMaze = [
       false,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 2,
     "j": 15,
     "walls": [
-      true,
       false,
+      true,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 3,
@@ -3168,11 +5841,22 @@ serializedMaze = [
       true,
       false,
       true,
-      false
+      true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 4,
@@ -3183,9 +5867,20 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 5,
@@ -3196,9 +5891,20 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 6,
@@ -3209,22 +5915,44 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 7,
     "j": 15,
     "walls": [
-      false,
+      true,
       false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 8,
@@ -3235,22 +5963,44 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 9,
     "j": 15,
     "walls": [
-      false,
       true,
+      false,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 10,
@@ -3259,40 +6009,49 @@ serializedMaze = [
       true,
       false,
       true,
-      true
+      false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 11,
     "j": 15,
     "walls": [
       false,
-      false,
+      true,
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 12,
-    "j": 15,
-    "walls": [
-      false,
-      true,
-      true,
-      false
-    ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
-  },
-  {
-    "i": 13,
     "j": 15,
     "walls": [
       false,
@@ -3300,12 +6059,23 @@ serializedMaze = [
       true,
       true
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
-    "i": 14,
+    "i": 13,
     "j": 15,
     "walls": [
       true,
@@ -3313,9 +6083,44 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": false,
-    "robotVisited": false,
-    "robotDirection": null
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
+  },
+  {
+    "i": 14,
+    "j": 15,
+    "walls": [
+      false,
+      false,
+      true,
+      false
+    ],
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      }
+    ]
   },
   {
     "i": 15,
@@ -3326,9 +6131,20 @@ serializedMaze = [
       true,
       false
     ],
-    "isRobotHere": true,
-    "robotVisited": true,
-    "robotDirection": "N"
+    "robots": [
+      {
+        "id": 1,
+        "isHere": false,
+        "visited": false,
+        "direction": null
+      },
+      {
+        "id": 2,
+        "isHere": true,
+        "visited": true,
+        "direction": "N"
+      }
+    ]
   }
 ]
 
@@ -3378,7 +6194,7 @@ explore_maze()
 
 
 
-
+#Sending packet MESSAGE data 2["update_maze",{"updatedMaze":[{"i":0,"j":0,"walls":[true,true,false,true],"robots":[{"id":1,"isHere":false,"visited":true,"direction":"S"},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":0,"walls":[true,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":0,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":0,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":0,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":0,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":0,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":0,"walls":[true,false,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":0,"walls":[true,false,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":0,"walls":[true,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":0,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":0,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":0,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":0,"walls":[true,false,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":0,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":0,"walls":[true,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":1,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":true,"visited":true,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":1,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":1,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":1,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":1,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":1,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":1,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":1,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":1,"walls":[false,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":1,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":1,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":1,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":1,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":1,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":1,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":1,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":2,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":2,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":2,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":2,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":2,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":2,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":2,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":2,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":2,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":2,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":2,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":2,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":2,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":2,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":2,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":2,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":3,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":3,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":3,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":3,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":3,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":3,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":3,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":3,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":3,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":3,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":3,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":3,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":3,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":3,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":3,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":3,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":4,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":4,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":4,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":4,"walls":[true,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":4,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":4,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":4,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":4,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":4,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":4,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":4,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":4,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":4,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":4,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":4,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":4,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":5,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":5,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":5,"walls":[true,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":5,"walls":[false,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":5,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":5,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":5,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":5,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":5,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":5,"walls":[true,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":5,"walls":[false,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":5,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":5,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":5,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":5,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":5,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":6,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":6,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":6,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":6,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":6,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":6,"walls":[true,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":6,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":6,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":6,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":6,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":6,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":6,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":6,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":6,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":6,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":6,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":7,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":7,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":7,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":7,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":7,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":7,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":7,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":7,"walls":[true,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":7,"walls":[false,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":7,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":7,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":7,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":7,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":7,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":7,"walls":[true,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":7,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":8,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":8,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":8,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":8,"walls":[false,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":8,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":8,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":8,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":8,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":8,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":8,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":8,"walls":[true,false,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":8,"walls":[true,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":8,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":8,"walls":[false,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":8,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":8,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":9,"walls":[false,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":9,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":9,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":9,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":9,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":9,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":9,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":9,"walls":[false,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":9,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":9,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":9,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":9,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":9,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":9,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":9,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":9,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":10,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":10,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":10,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":10,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":10,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":10,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":10,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":10,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":10,"walls":[true,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":10,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":10,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":10,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":10,"walls":[true,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":10,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":10,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":10,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":11,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":11,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":11,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":11,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":11,"walls":[true,false,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":11,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":11,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":11,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":11,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":11,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":11,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":11,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":11,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":11,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":11,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":11,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":12,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":12,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":12,"walls":[false,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":12,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":12,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":12,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":12,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":12,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":12,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":12,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":12,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":12,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":12,"walls":[false,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":12,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":12,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":12,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":13,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":13,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":13,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":13,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":13,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":13,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":13,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":13,"walls":[false,true,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":13,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":13,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":13,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":13,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":13,"walls":[true,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":13,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":13,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":13,"walls":[false,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":0,"j":14,"walls":[true,true,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":14,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":14,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":14,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":14,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":14,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":14,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":14,"walls":[true,false,false,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":14,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":14,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":14,"walls":[true,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":14,"walls":[true,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":14,"walls":[false,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":14,"walls":[true,false,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":14,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":14,"walls":[false,true,false,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":true,"visited":true,"direction":null}]},{"i":0,"j":15,"walls":[false,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":1,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":2,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":3,"j":15,"walls":[false,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":4,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":5,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":6,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":7,"j":15,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":8,"j":15,"walls":[true,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":9,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":10,"j":15,"walls":[false,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":11,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":12,"j":15,"walls":[true,false,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":13,"j":15,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":14,"j":15,"walls":[true,false,true,true],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":false,"direction":null}]},{"i":15,"j":15,"walls":[false,true,true,false],"robots":[{"id":1,"isHere":false,"visited":false,"direction":null},{"id":2,"isHere":false,"visited":true,"direction":"N"}]}]}]
 
 
 

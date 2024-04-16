@@ -1,280 +1,236 @@
 import sys
+import threading
+import time
+
+class ControlFlag:
+    stop_threads = False
+
 class MazeSimulator:
 
     def __init__(self, serializedMaze, socketio):
         self.serializedMaze = serializedMaze
         self.socketio = socketio
+        self.lock = threading.Lock()
 
-    def find_robot_cell(self):
-        return next((cell for cell in self.serializedMaze if cell["isRobotHere"]), None)
+    def find_robot_cell(self, robot_id):
+        for cell in self.serializedMaze:
+            for robot in cell["robots"]:
+                if robot["id"] == robot_id and robot["isHere"]:
+                    return cell, robot
+        return None, None
+
 
     def all_cells_visited(self):
-        return all(cell.get("robotVisited", False) for cell in self.serializedMaze)
+        # Check if all cells have been visited by at least one robot
+        for cell in self.serializedMaze:
+            if not any(robot['visited'] for robot in cell['robots']):
+                return False
+        return True
+
     
-    def sense_WallFront(self):
-        robot_cell = self.find_robot_cell()
-        if not robot_cell:
+    def sense_WallFront(self, robot_id):
+        # Use the modified find_robot_cell to accept a robot_id and find the cell for the specified robot
+        robot_cell, robot = self.find_robot_cell(robot_id)
+        if not robot_cell or not robot:
             return None
         
         # Mapping of directions to wall index
         direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"], None)
-        #print(wall_index)
+        wall_index = direction_to_index.get(robot["direction"], None)  # Use robot's direction from the updated structure
 
         if wall_index is not None:
-            if wall_index == 0: #That means it is North facing so that it needs to return the wall from index 0
-                #print(robot_cell["walls"][0])
-                return robot_cell["walls"][0]
-            elif wall_index == 1: #That means it is East facing so that it needs to return the wall from index 1
-                #print(robot_cell["walls"][1])
-                return robot_cell["walls"][1]
-            elif wall_index == 2: #That means it is South facing so that it needs to return the wall from index 2
-                #print(robot_cell["walls"][2])
-                return robot_cell["walls"][2]
-            elif wall_index == 3: #That means it is West facing so that it needs to return the wall from index 3
-                #print(robot_cell["walls"][3])
-                return robot_cell["walls"][3]
+            print(robot_cell["walls"][wall_index])
+            return robot_cell["walls"][wall_index]
+        
+        return None
+
+    def sense_WallBack(self, robot_id):
+        # Use the modified find_robot_cell to accept a robot_id and find the cell for the specified robot
+        robot_cell, robot = self.find_robot_cell(robot_id)
+        if not robot_cell or not robot:
+            return None
+        
+        # Mapping of directions to wall index and their opposites
+        direction_to_index = {'N': 2, 'E': 3, 'S': 0, 'W': 1}  # Directly map to opposite wall index
+        wall_index = direction_to_index.get(robot["direction"], None)
+
+        if wall_index is not None:
+            print(robot_cell["walls"][wall_index])
+            return robot_cell["walls"][wall_index]
+        
+        return None
+
+    def sense_WallLeft(self, robot_id):
+        # Use the modified find_robot_cell to accept a robot_id and find the cell for the specified robot
+        robot_cell, robot = self.find_robot_cell(robot_id)
+        if not robot_cell or not robot:
+            return None
+        
+        # Mapping of directions to their left wall index
+        direction_to_index = {'N': 3, 'E': 0, 'S': 1, 'W': 2}  # Maps each direction to the left wall index
+        wall_index = direction_to_index.get(robot["direction"], None)
+
+        if wall_index is not None:
+            print(robot_cell["walls"][wall_index])
+            return robot_cell["walls"][wall_index]
+        
+        return None
+
+    def sense_WallRight(self, robot_id):
+        # Use the modified find_robot_cell to accept a robot_id and find the cell for the specified robot
+        robot_cell, robot = self.find_robot_cell(robot_id)
+        if not robot_cell or not robot:
+            return None
+        
+        # Mapping of directions to their right wall index
+        direction_to_index = {'N': 1, 'E': 2, 'S': 3, 'W': 0}  # Maps each direction to the right wall index
+        wall_index = direction_to_index.get(robot["direction"], None)
+
+        if wall_index is not None:
+            print(robot_cell["walls"][wall_index])
+            return robot_cell["walls"][wall_index]
+        
+        return None
+
+
+    def move_forward(self, robot_id):
+        # Acquire a lock to ensure thread safety when accessing shared serializedMaze
+        with self.lock:
+            # Find the cell and robot using the updated find_robot_cell method
+            robot_cell, robot = self.find_robot_cell(robot_id)
             
-        return None
+            if not robot_cell or not robot:
+                print("Robot not found or missing robot cell")
+                return
+            
+            if self.sense_WallFront(robot_id):
+                print("Wall here, cannot move forward")
+                return
 
-    def sense_WallBack(self):
-        robot_cell = self.find_robot_cell()
-        if not robot_cell:
-            return None
-        
-        # Mapping of directions to wall index
-        direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"], None)
-
-        if wall_index is not None:
-            if wall_index == 0: 
-                #print(robot_cell["walls"][2])
-                return robot_cell["walls"][2]
-            elif wall_index == 1:
-                #print(robot_cell["walls"][3])
-                return robot_cell["walls"][3]
-            elif wall_index == 2:
-                #print(robot_cell["walls"][0])
-                return robot_cell["walls"][0]
-            elif wall_index == 3:
-                #print(robot_cell["walls"][1])
-                return robot_cell["walls"][1]
-        
-        return None
-
-    def sense_WallLeft(self):
-        robot_cell = self.find_robot_cell()
-        if not robot_cell:
-            return None
-        
-        # Mapping of directions to wall index
-        direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"], None)
-
-        if wall_index is not None:
-            if wall_index == 0: 
-                #print(robot_cell["walls"][3])
-                return robot_cell["walls"][3]
-            elif wall_index == 1:
-                #print(robot_cell["walls"][2])
-                return robot_cell["walls"][2]
-            elif wall_index == 2:
-                #print(robot_cell["walls"][1])
-                return robot_cell["walls"][1]
-            elif wall_index == 3:
-                #print(robot_cell["walls"][0])
-                return robot_cell["walls"][0]
-        
-        return None
-
-    def sense_WallRight(self):
-        robot_cell = self.find_robot_cell()
-        if not robot_cell:
-            return None
-        
-        # Mapping of directions to wall index
-        direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"], None)
-
-        if wall_index is not None:
-            if wall_index == 0: 
-                #print(robot_cell["walls"][1])
-                return robot_cell["walls"][1]
-            elif wall_index == 1:
-                #print(robot_cell["walls"][2])
-                return robot_cell["walls"][2]
-            elif wall_index == 2:
-                #print(robot_cell["walls"][3])
-                return robot_cell["walls"][3]
-            elif wall_index == 3:
-                #print(robot_cell["walls"][0])
-                return robot_cell["walls"][0]
-        
-        return None
-
-    def move_forward(self):
-        robot_cell = self.find_robot_cell()
-        print("move_forward - original cell: {robot_cell}", robot_cell)
-        if self.sense_WallFront():
-            sys.exit("Wall here cannot move forward")
-        i_value = robot_cell["i"]
-        j_value = robot_cell["j"]
-
-        for cell in self.serializedMaze:
-            if cell["i"] == i_value and cell["j"] == j_value:
-                cell["isRobotHere"] = False
-                break
-
-        direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"])
-        #print(wall_index)
-        if wall_index is not None:
-            if wall_index == 0:
+            # Calculate the new position based on the robot's direction
+            direction = robot["direction"]
+            i_value, j_value = robot_cell["i"], robot_cell["j"]
+            if direction == 'N':
                 j_value -= 1
-            elif wall_index == 1:
+            elif direction == 'E':
                 i_value += 1
-            elif wall_index == 2:
+            elif direction == 'S':
                 j_value += 1
-            elif wall_index == 3:
+            elif direction == 'W':
                 i_value -= 1
 
+            # Find the new cell based on the new position and update the robot's location
+            new_cell = next((cell for cell in self.serializedMaze if cell["i"] == i_value and cell["j"] == j_value), None)
+            if new_cell:
+                # Remove robot from current cell
+                for r in robot_cell["robots"]:
+                    if r["id"] == robot_id:
+                        r["isHere"] = False
+                        break
+
+                # Update robot in new cell
+                for r in new_cell["robots"]:
+                    if r["id"] == robot_id:
+                        r["isHere"] = True
+                        r["visited"] = True
+                        r["direction"] = direction
+                        # The robot's direction remains the same
+                        print(f"move_forward - new cell: {i_value}, {j_value}, direction: {direction}")
+                        break
+
+            # Emit the updated serialized maze state to the frontend
+            print("Final maze data before emit:", self.serializedMaze)
+            time.sleep(0.2)
+            self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
 
-        for cell in self.serializedMaze:
-            if cell["i"] == i_value and cell["j"] == j_value:
-                cell["isRobotHere"] = True
-                cell["robotVisited"] = True
-                cell["robotDirection"] = robot_cell["robotDirection"]
-                print("move_forward - new cell: {cell}", cell)
-
-                break
-        
-        #print(self.serializedMaze)
-    
-        if not robot_cell:
-            return None
-        
-
-        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
-
-    def move_backward(self):
-        robot_cell = self.find_robot_cell()
-        #print("move_backward - original cell: {robot_cell}", robot_cell)
-        if not robot_cell:
-            return None
-        
-        # The opposite direction to sense_WallBack since we're moving backward.
-        if self.sense_WallBack():
-            sys.exit("Wall here cannot move backward")
-
-        i_value = robot_cell["i"]
-        j_value = robot_cell["j"]
-
-        # Clear current robot position
-        for cell in self.serializedMaze:
-            if cell["i"] == i_value and cell["j"] == j_value:
-                cell["isRobotHere"] = False
-                break
-
-        direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"])
-
-        # Adjust i or j value based on the robot's direction to move backward
-        if wall_index is not None:
-            if wall_index == 0:  # If facing North, move South
+    def move_backward(self, robot_id):
+        # Lock the method to ensure thread safety
+        with self.lock:
+            # Find the robot and its cell
+            robot_cell, robot = self.find_robot_cell(robot_id)
+            if not robot_cell or not robot:
+                return None
+            
+            # Check for a wall in the opposite direction to where the robot is facing
+            if self.sense_WallBack(robot_id):
+                print("Wall here, cannot move backward")
+                return
+            
+            # Determine the new position based on the direction the robot is facing
+            direction = robot['direction']
+            i_value, j_value = robot_cell['i'], robot_cell['j']
+            if direction == 'N':
                 j_value += 1
-            elif wall_index == 1:  # If facing East, move West
+            elif direction == 'E':
                 i_value -= 1
-            elif wall_index == 2:  # If facing South, move North
+            elif direction == 'S':
                 j_value -= 1
-            elif wall_index == 3:  # If facing West, move East
+            elif direction == 'W':
                 i_value += 1
 
-        # Set the new position of the robot
-        for cell in self.serializedMaze:
-            if cell["i"] == i_value and cell["j"] == j_value:
-                cell["isRobotHere"] = True
-                cell["robotVisited"] = True
-                cell["robotDirection"] = robot_cell["robotDirection"]
-                print("move_backward - new cell: {cell}", cell)
-                break
-        
+            # Update the robot's position in the maze
+            for cell in self.serializedMaze:
+                if cell['i'] == i_value and cell['j'] == j_value:
+                    # Move the robot to the new cell
+                    robot['isHere'] = False  # Set the current cell's robot presence to False
+                    cell['robots'][robot_id-1]['isHere'] = True  # Update the new cell's robot presence
+                    cell['robots'][robot_id-1]['visited'] = True  # Mark the new cell as visited
+                    cell["direction"] = direction
 
-        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
+                    print(f"move_backward - new cell: {cell}")
+                    break
+            
+            # Emit the updated serialized maze to the frontend
+            time.sleep(0.2)
+            self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
-    def turn_left(self):
-        robot_cell = self.find_robot_cell()
-        if not robot_cell:
-            return None
-        
-        direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"], None)
+    def turn_left(self, robot_id):
+        # Locking to ensure thread safety during the update
+        with self.lock:
+            # Find the specific robot and its cell
+            robot_cell, robot = self.find_robot_cell(robot_id)
+            if not robot_cell or not robot:
+                return None
+            
+            # Current direction of the robot
+            current_direction = robot['direction']
+            
+            # Mapping to find the new direction when turning left
+            left_turn_map = {'N': 'W', 'E': 'N', 'S': 'E', 'W': 'S'}
+            new_direction = left_turn_map.get(current_direction, current_direction)  # Stay in current direction if undefined
+            
+            # Update the robot's direction in the maze
+            robot['direction'] = new_direction
+            print(f"Robot {robot_id} now facing: {new_direction}")
+            
+            # Emit the updated serialized maze to the frontend
+            time.sleep(0.2)
+            self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
-        if wall_index is not None:
-            if wall_index == 0: 
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'W'
-                        print("facing west: " + cell["robotDirection"])
-                        break
-            elif wall_index == 1:
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'N'
-                        print("facing north: " + cell["robotDirection"])
-                        break
-            elif wall_index == 2:
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'E'
-                        print("facing east: " + cell["robotDirection"])
-                        break
-            elif wall_index == 3:
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'S'
-                        print("facing south: " + cell["robotDirection"])
-                        break
+    def turn_right(self, robot_id):
+        # Locking to ensure thread safety during the update
+        with self.lock:
+            # Find the specific robot and its cell
+            robot_cell, robot = self.find_robot_cell(robot_id)
+            if not robot_cell or not robot:
+                return None
+            
+            # Current direction of the robot
+            current_direction = robot['direction']
+            
+            # Mapping to find the new direction when turning right
+            right_turn_map = {'N': 'E', 'E': 'S', 'S': 'W', 'W': 'N'}
+            new_direction = right_turn_map.get(current_direction, current_direction)  # Stay in current direction if undefined
+            
+            # Update the robot's direction in the maze
+            robot['direction'] = new_direction
+            print(f"Robot {robot_id} now facing: {new_direction}")
+            
+            # Emit the updated serialized maze to the frontend
+            time.sleep(0.2)
+            self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
-        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
-
-    def turn_right(self):
-        
-        robot_cell = self.find_robot_cell()
-        if not robot_cell:
-            return None
-        
-        direction_to_index = {'N': 0, 'E': 1, 'S': 2, 'W': 3}
-        wall_index = direction_to_index.get(robot_cell["robotDirection"], None)
-
-        if wall_index is not None:
-            if wall_index == 0: 
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'E'
-                        #print("facing east: " + cell["robotDirection"])
-                        break
-            elif wall_index == 1:
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'S'
-                        #print("facing south: " + cell["robotDirection"])
-                        break
-            elif wall_index == 2:
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'W'
-                        #print("facing west: " + cell["robotDirection"])
-                        break
-            elif wall_index == 3:
-                for cell in self.serializedMaze:
-                    if cell["i"] == robot_cell["i"] and cell["j"] == robot_cell["j"]:
-                        cell["robotDirection"] = 'N'
-                        #print("facing north: " + cell["robotDirection"])
-                        break
-
-
-        self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
 
         

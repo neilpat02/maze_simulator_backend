@@ -17,16 +17,7 @@ def send_code_to_robot(algorithm_code):
         
     }
 
-   ## Split the algorithm code into individual lines
-   #code_lines = algorithm_code.split('\n')
+    hardware_control.parse_line_by_line(algorithm_code)
 
-   ## Execute each line of the algorithm within the local context
-   #for line in code_lines:
-   #    if line.strip():  # Ignore empty lines
-   #        try:
-   #            exec(line, local_context, local_context)
-   #        except Exception as e:
-   #            print(f"Error executing line: {line}\nError: {e}")
-   #            # Handle any errors that occur during execution
-    
-    exec(algorithm_code, local_context, local_context)
+    #TODO: uncomment this if you want to revert to previous version
+    #exec(algorithm_code, local_context, local_context)

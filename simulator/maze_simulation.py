@@ -37,8 +37,8 @@ def execute_algorithm(algorithm_code, serializedMaze, socketio):
     print("Maze simulator object created")
 
     threads = []
-    for robot_id in [1, 2]:
-        # Each thread runs the algorithm for one robot
+    # Extend the range to include robots 1 to 4
+    for robot_id in [1, 2, 3, 4]:
         t = threading.Thread(target=execute_algorithm_for_robot, args=(robot_id, algorithm_code, maze_simulator))
         threads.append(t)
         t.start()
@@ -47,4 +47,3 @@ def execute_algorithm(algorithm_code, serializedMaze, socketio):
         t.join()
 
     return maze_simulator.serializedMaze
-    #return 0

@@ -11,6 +11,22 @@ class MazeSimulator:
         self.serializedMaze = serializedMaze
         self.socketio = socketio
         self.lock = threading.Lock()
+        self.start_time = time.time()
+        self.score = 600  # Initial Time Score (ITS)
+        self.visited_cells = set()
+        self.emit_score()
+
+    def emit_score(self):
+        """Emit the current score to all connected clients."""
+        self.socketio.emit('update_score', {'score': self.score})
+
+    def update_score_for_time(self):
+        elapsed_time = time.time() - self.start_time
+        if elapsed_time > 60:  # After the first 60 seconds
+            reduction_periods = (elapsed_time - 60) // 5
+            self.score -= 12.5 * reduction_periods
+            self.start_time = time.time()  # Reset start time for next period
+        self.emit_score()
 
     def find_robot_cell(self, robot_id):
         for cell in self.serializedMaze:
@@ -94,96 +110,84 @@ class MazeSimulator:
 
 
     def move_forward(self, robot_id):
-        # Acquire a lock to ensure thread safety when accessing shared serializedMaze
-        with self.lock:
-            # Find the cell and robot using the updated find_robot_cell method
-            robot_cell, robot = self.find_robot_cell(robot_id)
-            
-            if not robot_cell or not robot:
-                print("Robot not found or missing robot cell")
-                return
-            
-            if self.sense_WallFront(robot_id):
-                print("Wall here, cannot move forward")
-                return
+            with self.lock:
+                robot_cell, robot = self.find_robot_cell(robot_id)
+                if not robot_cell or not robot:
+                    print(f"Robot {robot_id} not found or missing robot cell")
+                    return
 
-            # Calculate the new position based on the robot's direction
-            direction = robot["direction"]
-            i_value, j_value = robot_cell["i"], robot_cell["j"]
-            if direction == 'N':
-                j_value -= 1
-            elif direction == 'E':
-                i_value += 1
-            elif direction == 'S':
-                j_value += 1
-            elif direction == 'W':
-                i_value -= 1
+                if self.sense_WallFront(robot_id):
+                    print(f"Robot {robot_id} at {robot_cell['i']}, {robot_cell['j']} cannot move forward due to wall")
+                    return
 
-            # Find the new cell based on the new position and update the robot's location
-            new_cell = next((cell for cell in self.serializedMaze if cell["i"] == i_value and cell["j"] == j_value), None)
-            if new_cell:
-                # Remove robot from current cell
-                for r in robot_cell["robots"]:
-                    if r["id"] == robot_id:
-                        r["isHere"] = False
-                        break
+                direction = robot["direction"]
+                movement_offsets = {'N': (0, -1), 'E': (1, 0), 'S': (0, 1), 'W': (-1, 0)}
+                i_offset, j_offset = movement_offsets[direction]
+                new_i, new_j = robot_cell["i"] + i_offset, robot_cell["j"] + j_offset
 
-                # Update robot in new cell
-                for r in new_cell["robots"]:
-                    if r["id"] == robot_id:
-                        r["isHere"] = True
-                        r["visited"] = True
-                        r["direction"] = direction
-                        # The robot's direction remains the same
-                        print(f"move_forward - new cell: {i_value}, {j_value}, direction: {direction}")
-                        break
+                new_cell = next((cell for cell in self.serializedMaze if cell["i"] == new_i and cell["j"] == new_j), None)
+                if not new_cell:
+                    print(f"New cell at {new_i}, {new_j} does not exist for Robot {robot_id}")
+                    return
 
-            # Emit the updated serialized maze state to the frontend
-            print("Final maze data before emit:", self.serializedMaze)
-            time.sleep(0.2)
-            self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
+                robot["isHere"] = False
+                new_robot = next((r for r in new_cell["robots"] if r["id"] == robot_id), None)
+                if new_robot:
+                    if not new_robot["isHere"]:
+                        new_robot["isHere"] = True
+                        new_robot["direction"] = direction
+                        if not new_robot["visited"]:
+                            new_robot["visited"] = True
+                            if (new_i, new_j) not in self.visited_cells:  # Check if cell is visited for the first time
+                                self.visited_cells.add((new_i, new_j))  # Add cell to visited set
+                                self.score += 2  # Add score for visiting a new cell
+                                self.emit_score()
+                                print(f"Robot {robot_id} visited new cell {new_i}, {new_j} for the first time")
+                print(f"Moved forward to {new_i}, {new_j}, direction: {direction}")
+                self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
+
 
 
     def move_backward(self, robot_id):
-        # Lock the method to ensure thread safety
         with self.lock:
-            # Find the robot and its cell
             robot_cell, robot = self.find_robot_cell(robot_id)
             if not robot_cell or not robot:
-                return None
-            
-            # Check for a wall in the opposite direction to where the robot is facing
-            if self.sense_WallBack(robot_id):
-                print("Wall here, cannot move backward")
+                print(f"Robot {robot_id} not found or missing robot cell")
                 return
-            
-            # Determine the new position based on the direction the robot is facing
+
+            if self.sense_WallBack(robot_id):
+                print(f"Robot {robot_id} at {robot_cell['i']}, {robot_cell['j']} cannot move backward due to wall")
+                return
+
             direction = robot['direction']
-            i_value, j_value = robot_cell['i'], robot_cell['j']
-            if direction == 'N':
-                j_value += 1
-            elif direction == 'E':
-                i_value -= 1
-            elif direction == 'S':
-                j_value -= 1
-            elif direction == 'W':
-                i_value += 1
+            movement_offsets = {'N': (0, 1), 'E': (-1, 0), 'S': (0, -1), 'W': (1, 0)}
+            i_offset, j_offset = movement_offsets[direction]
+            new_i, new_j = robot_cell["i"] + i_offset, robot_cell["j"] + j_offset
 
-            # Update the robot's position in the maze
-            for cell in self.serializedMaze:
-                if cell['i'] == i_value and cell['j'] == j_value:
-                    # Move the robot to the new cell
-                    robot['isHere'] = False  # Set the current cell's robot presence to False
-                    cell['robots'][robot_id-1]['isHere'] = True  # Update the new cell's robot presence
-                    cell['robots'][robot_id-1]['visited'] = True  # Mark the new cell as visited
-                    cell["direction"] = direction
+            new_cell = next((cell for cell in self.serializedMaze if cell["i"] == new_i and cell["j"] == new_j), None)
+            if not new_cell:
+                print(f"New cell at {new_i}, {new_j} does not exist for Robot {robot_id}")
+                return
 
-                    print(f"move_backward - new cell: {cell}")
-                    break
-            
-            # Emit the updated serialized maze to the frontend
-            time.sleep(0.2)
+            robot["isHere"] = False
+            new_robot = next((r for r in new_cell["robots"] if r["id"] == robot_id), None)
+            if new_robot:
+                if not new_robot["isHere"]:
+                    new_robot["isHere"] = True
+                    new_robot["direction"] = direction
+                    if not new_robot["visited"]:
+                        new_robot["visited"] = True
+                        if (new_i, new_j) not in self.visited_cells:  # Check if cell is visited for the first time
+                            self.visited_cells.add((new_i, new_j))  # Add cell to visited set
+                            self.score += 2  # Add score for visiting a new cell
+                            self.emit_score()
+                            print(f"Robot {robot_id} visited new cell {new_i}, {new_j} for the first time")
+                print(f"Robot {robot_id} moved backward to new cell {new_i}, {new_j}")
+
             self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
+
+
+
 
     def turn_left(self, robot_id):
         # Locking to ensure thread safety during the update
@@ -205,7 +209,7 @@ class MazeSimulator:
             print(f"Robot {robot_id} now facing: {new_direction}")
             
             # Emit the updated serialized maze to the frontend
-            time.sleep(0.2)
+            time.sleep(0.05)
             self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
     def turn_right(self, robot_id):
@@ -228,7 +232,7 @@ class MazeSimulator:
             print(f"Robot {robot_id} now facing: {new_direction}")
             
             # Emit the updated serialized maze to the frontend
-            time.sleep(0.2)
+            time.sleep(0.05)
             self.socketio.emit('update_maze', {'updatedMaze': self.serializedMaze})
 
 

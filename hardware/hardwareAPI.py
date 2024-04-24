@@ -6,7 +6,7 @@ class HardwareControl:
         self.client = mqtt.Client()
 
         # Define the MQTT Broker Address (Replace with the actual address of  broker)
-        self.mqtt_broker = "172.20.10.2"
+        self.mqtt_broker = "172.20.10.9"
 
         # Set callback methods
         self.client.on_connect = self.on_connect

@@ -10,7 +10,6 @@ def trace_func(frame, event, arg):
     return trace_func
 
 def execute_algorithm_for_robot(robot_id, algorithm_code, maze_simulator):
-    # Create a copy of local context specific to this thread and robot
     local_context = {
         "sense_WallLeft": lambda: maze_simulator.sense_WallLeft(robot_id),
         "sense_WallRight": lambda: maze_simulator.sense_WallRight(robot_id),
@@ -20,8 +19,7 @@ def execute_algorithm_for_robot(robot_id, algorithm_code, maze_simulator):
         "turn_right": lambda: maze_simulator.turn_right(robot_id),
         "move_forward": lambda: maze_simulator.move_forward(robot_id),
         "move_backward": lambda: maze_simulator.move_backward(robot_id),
-        "all_cells_visited": maze_simulator.all_cells_visited  # Assuming this checks globally, not per robot
-        # No need to pass "find_robot_cell" unless used directly in algorithm code
+        "all_cells_visited": maze_simulator.all_cells_visited
     }
     sys.settrace(trace_func)
     try:
@@ -37,7 +35,6 @@ def execute_algorithm(algorithm_code, serializedMaze, socketio):
     print("Maze simulator object created")
 
     threads = []
-    # Extend the range to include robots 1 to 4
     for robot_id in [1, 2, 3, 4]:
         t = threading.Thread(target=execute_algorithm_for_robot, args=(robot_id, algorithm_code, maze_simulator))
         threads.append(t)
@@ -46,4 +43,10 @@ def execute_algorithm(algorithm_code, serializedMaze, socketio):
     for t in threads:
         t.join()
 
+    # Emit the final maze state after all threads have finished
+    with maze_simulator.lock:
+        socketio.emit('update_maze', {'updatedMaze': maze_simulator.serializedMaze})
+
     return maze_simulator.serializedMaze
+
+

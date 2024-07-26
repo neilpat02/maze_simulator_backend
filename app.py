@@ -1,3 +1,4 @@
+# app.py
 from flask import Flask, request, jsonify
 from flask_socketio import SocketIO
 from flask_cors import CORS
@@ -8,6 +9,8 @@ import hardware.execution as hardware_execution  # This will contain the hardwar
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS for all domains on all routes
+
+# Using gevent for the server
 socketio = SocketIO(app, cors_allowed_origins="*", logger=True, engineio_logger=True, async_mode='gevent')
 
 @app.route('/run', methods=['POST'])
